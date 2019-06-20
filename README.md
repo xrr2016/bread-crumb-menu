@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Bread Crumbs Cli 👋</h1>
+<h1 align="center">Welcome to Bread Crumbs Menu 👋</h1>
 <p>
   <img src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
 </p>

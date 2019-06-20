@@ -1,5 +1,5 @@
 {
-  "name": "bcc",
+  "name": "bcm",
   "version": "0.0.3",
   "main": "index.js",
   "author": "xrr2016",
@@ -12,7 +12,7 @@
     "cli"
   ],
   "bin": {
-    "bcc": "lib/index.js"
+    "bcm": "lib/index.js"
   },
   "dependencies": {
     "boxen": "^4.1.0",
