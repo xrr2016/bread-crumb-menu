@@ -3,17 +3,10 @@
   <img src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
 </p>
 
-## Install
-
-```sh
-yarn add bcm
-```
-
 ## Usage
 
 ```sh
-bcm init // 初始化面包屑
-bcm new  // 新增目录或文件
+npx bcm
 ```
 
 ```vue
