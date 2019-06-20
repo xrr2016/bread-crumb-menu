@@ -40,6 +40,21 @@ export const findMatchRoutes = (
   }
 };
 
+function findRoutes(paths = [], routers = []) {
+  if (!paths.length || !routers.length) {
+    return [];
+  }
+
+  const matchs = [];
+
+  paths.forEach(p => {
+    const route = routers.find(r => r.path === p);
+    matchs.push(route);
+  });
+
+  return matchs;
+}
+
 export default {
   name: "DpBreadCrumb",
   props: {
@@ -62,7 +77,8 @@ export default {
         .filter(r => r)
         .map(r => "/" + r);
 
-      return findMatchRoutes(paths, breads, 0, []);
+      // return findMatchRoutes(paths, breads, 0, []);
+      return findRoutes(paths, breads);
     }
   }
 };
