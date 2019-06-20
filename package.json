@@ -1,0 +1,31 @@
+{
+  "name": "bread-crumbs-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "xrr2016",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "vue",
+    "nuxt",
+    "breadcrumbs",
+    "cli"
+  ],
+  "bin": {
+    "bcc": "lib/index.js"
+  },
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "ejs": "^2.6.2",
+    "fs-extra": "^8.0.1",
+    "inquirer": "^6.3.1",
+    "jsonfile": "^5.0.0",
+    "ora": "^3.4.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "readme-md-generator": "^0.3.0"
+  }
+}
