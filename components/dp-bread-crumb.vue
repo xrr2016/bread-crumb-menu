@@ -49,7 +49,9 @@ function findRoutes(paths = [], routers = []) {
 
   paths.forEach(p => {
     const route = routers.find(r => r.path === p);
-    matchs.push(route);
+    if (route) {
+      matchs.push(route);
+    }
   });
 
   return matchs;
@@ -71,14 +73,12 @@ export default {
         return [{ name: "首页", path, isLink: false }];
       }
 
-      const breads = breadcrumbs;
-      const paths = this.$route.path
+      const paths = path
         .split("/")
         .filter(r => r)
         .map(r => "/" + r);
 
-      // return findMatchRoutes(paths, breads, 0, []);
-      return findRoutes(paths, breads);
+      return findRoutes(paths, breadcrumbs);
     }
   }
 };
