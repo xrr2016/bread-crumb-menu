@@ -6,14 +6,14 @@
 ## Install
 
 ```sh
-yarn add bread-crumbs-cli
+yarn add bcm
 ```
 
 ## Usage
 
 ```sh
-bcc init // 初始化面包屑
-bcc new  // 新增目录或文件
+bcm init // 初始化面包屑
+bcm new  // 新增目录或文件
 ```
 
 ```vue
