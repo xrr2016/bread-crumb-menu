@@ -6,7 +6,7 @@
 ## Install
 
 ```sh
-yarn add bread-crumbs-cli --dev
+yarn add bread-crumbs-cli
 ```
 
 ## Usage
