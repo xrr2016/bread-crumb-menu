@@ -1,14 +1,14 @@
 <template>
-  <div class="<%= pageName %>"><%= pageName %></div>
+  <div class="<%= fileName %>"><%= fileName %></div>
 </template>
 
 <script>
 export default {
-  name: "<%= pageName %>"
+  name: "<%= fileName %>"
 };
 </script>
 
 <style>
-.<%= pageName % > {
+.<%= fileName %> {
 }
 </style>
