@@ -11,6 +11,10 @@
     "breadcrumbs",
     "cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xrr2016/bread-crumbs-menu"
+  },
   "bin": {
     "bcm": "lib/index.js"
   },
