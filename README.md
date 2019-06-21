@@ -3,12 +3,20 @@
   <img src="https://img.shields.io/badge/version-0.0.12-blue.svg?cacheSeconds=2592000" />
 </p>
 
+## Install
+
+```bash
+npm install bcm -g
+// OR
+yarn global add bcm
+```
+
 ## Usage
 
 ```bash
-npx bcm init // 初始化面包屑组件
-npx bcm new  // 新增页面文件
-npx bcm show // 显示面包屑的配置
+bcm init // 初始化面包屑组件
+bcm new  // 新增页面文件
+bcm show // 显示面包屑的配置
 ```
 
 在需要渲染面包屑的地方引入组件
