@@ -44,9 +44,14 @@ export default {
 
       return paths.map(path => {
         const item = breadcrumbs.find(bread => bread.path === path);
+
         if (item) {
           return item;
         }
+        return {
+          name: path.split("/").pop(),
+          path
+        };
       });
     }
   },
