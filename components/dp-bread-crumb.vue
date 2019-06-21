@@ -1,8 +1,7 @@
 <template>
   <ul class="dp-breadcrumb" role="navigation" aria-roledescription="bread crumbs">
-    <li class="dp-breadcrumb__item" v-for="(bread, index) of breads" :key="index">
-      <a class="dp-breadcrumb__link" :href="bread.path" v-if="bread.isLink">{{ bread.name }}</a>
-      <a class="dp-breadcrumb__link" v-else>{{ bread.name }}</a>
+    <li class="dp-breadcrumb__item" v-for="(bread, index) of renderBreads" :key="index">
+      <a class="dp-breadcrumb__link" :href="bread.path">{{ bread.name }}</a>
       <span class="dp-breadcrumb__separator">{{ separator }}</span>
     </li>
   </ul>
@@ -10,52 +9,6 @@
 
 <script>
 import breadcrumbs from "./dp-bread-crumb.json";
-
-export const findMatchRoutes = (
-  paths = [],
-  routers = [],
-  index = 0,
-  matched = []
-) => {
-  if (!paths.length || !routers.length) {
-    return [];
-  }
-
-  const path = paths[index];
-  const matchRoute = routers.find(r => r.path === path);
-
-  if (matchRoute) {
-    if (matchRoute.children && matchRoute.children.length) {
-      return findMatchRoutes(
-        paths,
-        matchRoute.children,
-        index + 1,
-        matched.concat(matchRoute)
-      );
-    } else {
-      return matched.concat(matchRoute);
-    }
-  } else {
-    return matched;
-  }
-};
-
-function findRoutes(paths = [], routers = []) {
-  if (!paths.length || !routers.length) {
-    return [];
-  }
-
-  const matchs = [];
-
-  paths.forEach(p => {
-    const route = routers.find(r => r.path === p);
-    if (route) {
-      matchs.push(route);
-    }
-  });
-
-  return matchs;
-}
 
 export default {
   name: "DpBreadCrumb",
@@ -66,19 +19,35 @@ export default {
     }
   },
   computed: {
-    breads() {
+    renderBreads() {
+      let paths = null;
       const path = this.$route.path;
 
       if (path === "/") {
-        return [{ name: "首页", path, isLink: false }];
+        paths = [path];
+      } else {
+        paths = path
+          .split("/")
+          .filter(p => p)
+          .map(p => "/" + p)
+          .map((path, index, paths) => {
+            if (index) {
+              let result = "";
+              for (let i = 0; i <= index; i++) {
+                result += paths[i];
+              }
+              return result;
+            }
+            return path;
+          });
       }
 
-      const paths = path
-        .split("/")
-        .filter(r => r)
-        .map(r => "/" + r);
-
-      return findRoutes(paths, breadcrumbs);
+      return paths.map(path => {
+        const item = breadcrumbs.find(bread => bread.path === path);
+        if (item) {
+          return item;
+        }
+      });
     }
   }
 };
