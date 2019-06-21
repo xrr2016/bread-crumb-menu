@@ -1,20 +1,14 @@
-<h1 align="center">Welcome to Bread Crumbs Menu 👋</h1>
+<h1 align="center">Welcome to Bread Crumb Menu 👋</h1>
 <p>
   <img src="https://img.shields.io/badge/version-0.0.9-blue.svg?cacheSeconds=2592000" />
 </p>
 
-## Install
-
-```bash
-yarn add bcm
-```
-
 ## Usage
 
 ```bash
-bcm init // 初始化面包屑组件
-bcm new  // 新增页面文件
-bcm show // 显示面包屑的配置
+npx bcm init // 初始化面包屑组件
+npx bcm new  // 新增页面文件
+npx bcm show // 显示面包屑的配置
 ```
 
 在需要渲染面包屑的地方引入组件
@@ -25,7 +19,7 @@ bcm show // 显示面包屑的配置
 </template>
 
 <script>
-  import DpBreadCrumb from '@/components/breadcrumb/dp-bread-crumb.vue'
+  import DpBreadCrumb from './components/breadcrumb/dp-bread-crumb.vue'
 
   export default {
     components: {
