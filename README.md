@@ -31,7 +31,7 @@ npx bcm show // 显示面包屑的配置
 
 ## Contributing
 
-1. Fork it (<https://github.com/xrr2016/bread-crumbs-menu.git>)
+1. Fork it (<https://github.com/xrr2016/bread-crumb-menu.git>)
 2. Create your feature branch (`git checkout -b feat/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
