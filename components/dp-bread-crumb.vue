@@ -1,7 +1,7 @@
 <template>
   <ul class="dp-breadcrumb" role="navigation" aria-roledescription="bread crumbs">
     <li class="dp-breadcrumb__item" v-for="(bread, index) of renderBreads" :key="index">
-      <a class="dp-breadcrumb__link" :href="bread.path">{{ bread.name }}</a>
+      <a class="dp-breadcrumb__link" @click="handleClick(bread.path)">{{ bread.name }}</a>
       <span class="dp-breadcrumb__separator">{{ separator }}</span>
     </li>
   </ul>
@@ -49,6 +49,14 @@ export default {
         }
       });
     }
+  },
+  methods: {
+    handleClick(path = "") {
+      if (!path || this.$route.path === path) {
+        return;
+      }
+      this.$router.push(path);
+    }
   }
 };
 </script>
@@ -80,10 +88,10 @@ export default {
 .dp-breadcrumb__item {
   float: left;
   padding: 1em 0;
-  color: #606266;
 }
 
 .dp-breadcrumb__link {
+  color: #606266;
   text-decoration: none;
   transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
