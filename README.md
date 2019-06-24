@@ -60,6 +60,12 @@ bcm show // 显示面包屑的配置
 
 ## 例子
 
+安装 `bcm`
+
+```bash
+yarn global add bcm
+```
+
 使用 `@vue/cli` 创建一个新的 `Vue` 项目
 
 ```bash
@@ -69,6 +75,71 @@ vue create my-vue-project
 选择 `vue-router`
 
 ![router](screenshots/router.jpg)
+
+运行初始化命令
+
+```bash
+bcm init
+```
+
+![router](screenshots/init.jpg)
+
+在 `App.vue` 中引入组件
+
+运行项目，此时页面上的面包屑渲染为
+
+![render](screenshots/render.jpg)
+
+新增一个带子路由的页面
+
+![render](screenshots/product.jpg)
+![render](screenshots/list.jpg)
+![render](screenshots/detail.jpg)
+
+此时 `dp-bread-crumb.json` 为
+
+```json
+[
+  {
+    "name": "首页",
+    "path": "/"
+  },
+  {
+    "name": "产品",
+    "path": "/product/index"
+  },
+  {
+    "name": "产品列表",
+    "path": "/product/list"
+  },
+  {
+    "name": "产品详情",
+    "path": "/product/detail"
+  }
+]
+```
+
+在 `router.js` 新增一项路由配置
+
+```js
+{
+  path: '/product',
+  name: 'product',
+  component: Product,
+  children: [
+    {
+      path: 'list',
+      component: List
+    },
+    {
+      path: 'detail',
+      component: Detail
+    }
+  ]
+}
+```
+
+访问新增的路由页面，面包屑渲染为
 
 ## Contributing
 
