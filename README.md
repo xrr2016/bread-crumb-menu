@@ -90,11 +90,15 @@ bcm init
 
 ![render](screenshots/render.jpg)
 
-新增一个带子路由的页面
+新增业务页面
 
 ![render](screenshots/product.jpg)
-![render](screenshots/list.jpg)
 ![render](screenshots/detail.jpg)
+![render](screenshots/new.jpg)
+
+```bash
+bcm show
+```
 
 此时 `dp-bread-crumb.json` 为
 
@@ -106,40 +110,39 @@ bcm init
   },
   {
     "name": "产品",
-    "path": "/product/index"
-  },
-  {
-    "name": "产品列表",
-    "path": "/product/list"
+    "path": "/product"
   },
   {
     "name": "产品详情",
     "path": "/product/detail"
+  },
+  {
+    "name": "新增产品",
+    "path": "/product/detail/new"
   }
 ]
 ```
 
-在 `router.js` 新增一项路由配置
+在 `router.js` 新增路由配置
 
 ```js
 {
-  path: '/product',
-  name: 'product',
-  component: Product,
-  children: [
-    {
-      path: 'list',
-      component: List
-    },
-    {
-      path: 'detail',
-      component: Detail
-    }
-  ]
-}
+  path: '/productt',
+  component: Product
+},
+{
+  path: '/product/detail',
+  component: Detail
+},
+{
+  path: '/product/detail/new',
+  component: New
+},
 ```
 
-访问新增的路由页面，面包屑渲染为
+面包屑渲染为
+
+![render](screenshots/new.gif)
 
 ## Contributing
 
