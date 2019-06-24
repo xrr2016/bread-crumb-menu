@@ -68,9 +68,11 @@ export default {
 
 <style scoped>
 .dp-breadcrumb {
+  display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  height: 50px;
   list-style: none;
 }
 
@@ -91,7 +93,6 @@ export default {
 }
 
 .dp-breadcrumb__item {
-  float: left;
   padding: 1em 0;
 }
 
