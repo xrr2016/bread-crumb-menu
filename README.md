@@ -1,6 +1,6 @@
 # Bread Crumb Menu 👋
 
-![version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
+![version](https://img.shields.io/badge/version-0.1.1-blue.svg?cacheSeconds=2592000)
 
 ## 安装
 
