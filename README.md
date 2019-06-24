@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Bread Crumb Menu 👋</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-0.0.12-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-0.0.17-blue.svg?cacheSeconds=2592000" />
 </p>
 
 ## Install
