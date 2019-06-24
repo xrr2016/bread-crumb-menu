@@ -1,6 +1,6 @@
 # Bread Crumb Menu 👋
 
-![version](https://img.shields.io/badge/version-0.0.17-blue.svg?cacheSeconds=2592000)
+![version](https://img.shields.io/badge/version-0.0.18-blue.svg?cacheSeconds=2592000)
 
 ## 安装
 
@@ -59,6 +59,16 @@ bcm show // 显示面包屑的配置
 4. 中文名，为面包屑上显示的中文文字
 
 ## 例子
+
+使用 `@vue/cli` 创建一个新的 `Vue` 项目
+
+```bash
+vue create my-vue-project
+```
+
+选择 `vue-router`
+
+![router](screenshots/router.jpg)
 
 ## Contributing
 
