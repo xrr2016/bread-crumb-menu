@@ -144,6 +144,10 @@ bcm show
 
 ![render](screenshots/new.gif)
 
+## 原理
+
+新增页面时更新 dp-bread-crumb.json 中的数据，记录文件路径和中文文字，将 this.\$route.path 如 "/foo/bar" ，转为为一个数组 ['foo', 'foo/bar']，然后与 dp-bread-crumb.json 中的数据进行对比，找到相同的路径就渲染
+
 ## Contributing
 
 1. Fork it (<https://github.com/xrr2016/bread-crumb-menu.git>)
