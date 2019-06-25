@@ -1,6 +1,6 @@
 # Bread Crumb Menu 👋
 
-![version](https://img.shields.io/badge/version-0.1.2-blue.svg?cacheSeconds=2592000)
+![version](https://img.shields.io/badge/version-0.1.2-blue.svg?cacheSeconds=2592000) [![Build Status](https://travis-ci.org/xrr2016/bread-crumb-menu.svg?branch=master)](https://travis-ci.org/xrr2016/bread-crumb-menu)
 
 ## 安装
 
