@@ -1,2 +1,15 @@
 language: node_js
-cache: yarn
+node_js:
+- lts/*
+install:
+- yarn
+cache:
+  yarn: true
+deploy:
+  provider: npm
+  email: xiaoranran1993@outlook.com
+  api_key:
+    secure: HzjNdRR2BHpfK73bd7HBb6OS8pho/NLshoAzMT6ij1jnG6ktcYtjxCqImN4JKMXHVvOMCR5z91l/hjhmnKQ53L8rkMKzDIHTgWFLu9no9nx4fLCKZlYr8ZVeZDLYUdbUdSXXINdJvdkCbgJCwOTHQ3lXOVGEMeZZR5/QvcndCZf6mScawdoLJ6Y5vldeq+qYuEX7e8zkPt5/YYmOpv1v1C+lJpnWe7oCA0G8b+pN6uRMNlYeyCpwLwsPaNgOEOMGfzNJgw+rZvGgeTP8J+pQU7xUmOzfPaYN/O9J3o0ULUrqjIpTS5QUo2LHI+ZvW7YDsgiaj5lO7ZJIhesZJABoaydIpd6/CH5LsOTdvzHMzAOJ6/fcVU728OTT+BS4ZM0CWHjOdPsXxFO6pIJcSnNhTELnWYaCIVR8AmfXPtYKxIC1kC6U+g2nZyXib5WTUH3G5u2OhcVJuR7Ni9ADDnM2uNWNw9ZqN3JQd2w0crE7/4axyqOcEa8YWz/IfLG6CUePsEQMnYcrVvydEwvNrdg71HrE6/wXJgJgvML7gI0VQFPWDp6GC/p+ch6uUww8UCLaDS/49+5cYH4OCtjQzTJT045HMZY2WE/+oiITc3qJZgpVS/m8addXHOYQY44N0Yy99X5IsRz+AcFqad8zkQABuzT21NhC7kM5q4VAOZiZ9JQ=
+  skip-cleanup: true
+  on:
+    branch: master
